@@ -1,2 +1,2 @@
-# homework_1
+# homework_
 An app with a list of posts
