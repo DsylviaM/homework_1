@@ -1,5 +1,5 @@
 import MainLayout from '../shared/layouts/MainLayout'
-import { factPosts } from "../shared/constants/posts";
+import { factPosts } from "../entities/post/model/mocks/factPosts";
 
 function App() {
     return (

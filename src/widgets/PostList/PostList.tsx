@@ -1,6 +1,6 @@
 import { PostCard } from "../../entities/post/ui/PostCard";
 import { withLoading } from '../../shared/lib/hoc/withLoading';
-import { factPosts, Post } from '../../shared/constants/posts';
+import { factPosts, Post } from '../../entities/post/model/mocks/factPosts';
 import { useCallback, useMemo, useState } from "react";
 import { filterByLength } from "../../features/PostLengthFilter/lib/filterByLength";
 import { PostLengthFilter } from "../../features/PostLengthFilter/ui/PostLengthFilter";
@@ -11,7 +11,7 @@ interface PostListProps {
 }
 
 
-export const PostList = ({ posts }: PostListProps) => {
+export const PostList = (posts) => {
     const [minLength, setMinLength] = useState(0);
     posts = factPosts;
 
