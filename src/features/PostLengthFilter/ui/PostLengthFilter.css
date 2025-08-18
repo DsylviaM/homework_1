@@ -1,0 +1,23 @@
+.length-filter.light {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f5ba13;
+    border-radius: 4px;
+    font-family: "McLaren", cursive;
+}
+.length-filter.dark {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #83827e;
+    border-radius: 4px;
+    font-family: "McLaren", cursive;
+}
+
+.length-filter-input {
+    margin-left: 0.5rem;
+    padding: 0.3rem;
+    border: 1px solid #6200ee;
+    border-radius: 4px;
+    width: 60px;
+    font-family: "McLaren", cursive;
+}
