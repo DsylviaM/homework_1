@@ -3,7 +3,6 @@ import { useTheme } from "../../shared/lib/theme/useTheme";
 import Modal from "../../shared/ui/Modal/Modal";
 import { Button } from "../../shared/ui/Button/Button";
 import styles from "./Header.module.scss";
-import { UserTabs } from "../UserTabs";
 
 const Header = (props) => {
     const { isDark, toggleTheme } = useTheme();
@@ -12,7 +11,6 @@ const Header = (props) => {
     return <header
         className={`${styles.header} ${isDark ? styles.dark : styles.light}`}
     >
-        <UserTabs userId="1" /> 
         <img
             src={isDark ? '/images/logo-dark.png' : '/images/logo-light.png'}
             width={30}

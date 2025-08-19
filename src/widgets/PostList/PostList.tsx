@@ -6,10 +6,6 @@ import { PostLengthFilter } from "../../features/PostLengthFilter/ui/PostLengthF
 import  styles  from "./PostList.module.scss";
 import { Post } from "../../features/PostList/model/types/post";
 
-// interface PostListProps {
-//   posts: Post[];
-// }
-
 export const PostList = (posts) => {
     const [minLength, setMinLength] = useState(0);
 

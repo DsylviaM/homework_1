@@ -1,9 +1,10 @@
 .length-filter.light {
     margin: 1rem 0;
     padding: 1rem;
-    background: #f5ba13;
+    background: #f1eee6;
     border-radius: 4px;
     font-family: "McLaren", cursive;
+    margin-top: 0px;
 }
 .length-filter.dark {
     margin: 1rem 0;
@@ -11,6 +12,7 @@
     background: #83827e;
     border-radius: 4px;
     font-family: "McLaren", cursive;
+    margin-top: 0px;
 }
 
 .length-filter-input {

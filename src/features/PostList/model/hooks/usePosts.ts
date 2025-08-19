@@ -1,4 +1,3 @@
-// usePosts.ts
 import { useState, useEffect } from 'react';
 import { fetchAllPosts, fetchUserPosts, fetchPostComments } from '../api/postApi';
 import type { Post, Comment } from '../types/post';
@@ -17,7 +16,6 @@ export const usePosts = (userId?: string): UsePostsResult => {
   const [posts, setPosts] = useState<(Post & PostWithComments)[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  console.log("Post from API",posts);
 
   useEffect(() => {
     const loadPostsWithComments = async () => {
