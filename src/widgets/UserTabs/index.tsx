@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import styles from './UserTabs.module.scss';
 
 interface UserTabsProps {
@@ -8,23 +8,23 @@ interface UserTabsProps {
 export const UserTabs = ({ userId }: UserTabsProps) => {
   return (
     <div className={styles.tabs}>
-      <NavLink
-        to={`/users/${userId}/posts`}
+            <NavLink
+        to={`/`}
         className={({ isActive }) => (isActive ? styles.active : '')}
       >
         Posts
       </NavLink>
       <NavLink
-        to={`/users/${userId}/albums`}
+        to={`/albums/${userId}/photos`}
         className={({ isActive }) => (isActive ? styles.active : '')}
       >
         Albums
       </NavLink>
       <NavLink
-        to={`/users/${userId}/todos`}
+        to={`/users/${userId}`}
         className={({ isActive }) => (isActive ? styles.active : '')}
       >
-        Todos
+        Users
       </NavLink>
     </div>
   );

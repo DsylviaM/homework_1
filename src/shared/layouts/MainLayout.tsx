@@ -1,15 +1,11 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../../widgets/LayoutHeader/Header";
 import Footer from "../../widgets/LayoutFooter/Footer";
 import "./MainLayout.modul.scss";
-import PostList from "../../widgets/PostList/PostList";
-// import { Post } from "../constants/posts";
 
 interface MainLayoutProps {
-//   posts: Post[];
 children: React.ReactNode;
 }
-
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -17,11 +13,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     return (
         <>
             <Header
-                appTitle="My Application for homework 3"
-                factsTitle="Interesting facts: "
+                appTitle="My Application for homework 4"
             />
             <main>
-                {/* <PostList isLoading={isLoading} posts={posts}/> */}
                 { children }
             </main>
             <Footer name="Natalia" />

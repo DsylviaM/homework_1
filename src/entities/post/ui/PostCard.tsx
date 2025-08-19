@@ -1,5 +1,5 @@
 import { useTheme } from '../../../shared/lib/theme/useTheme';
-import { Post } from '../../../shared/constants/posts';
+import { Post } from '../../../features/PostList/model/types/post';
 import { CommentList } from '../../../widgets/CommentList/ui/CommentList';
 import '../ui/PostCard.css';
 import { memo } from 'react';
