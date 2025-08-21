@@ -1,17 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Header from "../../widgets/LayoutHeader/Header";
 import Footer from "../../widgets/LayoutFooter/Footer";
 import PostList from "../../widgets/PostList/PostList";
 
-const MainLayout = () => {
+interface MainLayoutProps {
+    children: ReactNode;
+    header?: ReactNode;
+    footer?: ReactNode;
+}
+
+const MainLayout = ({ children, header, footer }: MainLayoutProps) => {
     return (
         <>
-            <h1>My Application for homework 1</h1>
-            <Header />
+            {header}
             <main>
-                <PostList />
+                {children}
             </main>
-            <Footer />
+            {footer}
         </>
     )
 }

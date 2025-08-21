@@ -1,6 +1,6 @@
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer = (props) => {
     const CurrentlyYear = new Date().getFullYear();
     return <footer className={styles.footer}>
         <p>
