@@ -1,8 +1,8 @@
-import React from "react";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
     const CurrentlyYear = new Date().getFullYear();
-    return <footer>
+    return <footer className={styles.footer}>
         <p>
         Copyright by Natalia © {CurrentlyYear}
     </p>

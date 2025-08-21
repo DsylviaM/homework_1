@@ -1,4 +1,5 @@
-import type { Post } from '../../../widgets/PostList/PostList';
+import type { Post } from '../model/types';
+import styles from "./PostCard.module.scss";
 
 
 interface PostCardProps {
@@ -7,7 +8,7 @@ interface PostCardProps {
 
 const Card = ({ post }: PostCardProps) => {
     return (
-        <div className="layout">
+        <div className={styles.layout}>
             <p>{post.id}. {post.body}</p>
         </div>
     )

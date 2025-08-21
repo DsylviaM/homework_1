@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../widgets/LayoutHeader/Header";
 import Footer from "../../widgets/LayoutFooter/Footer";
-import '../../../css/style.css';
 import PostList from "../../widgets/PostList/PostList";
 
 const MainLayout = () => {
