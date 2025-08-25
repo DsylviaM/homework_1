@@ -1,0 +1,25 @@
+.button {
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.button:hover {
+  background-color: #f7fafc;
+}
+
+/* Для темной темы */
+[data-theme="dark"] .button:hover {
+  background-color: #2d3748;
+}
+
+.image {
+  object-fit: cover;
+  width: 32px;
+  height: 32px;
+  background-color: #b692e8;
+  border-radius: 4px;
+}

@@ -1,4 +1,5 @@
 import { useTheme } from '../../../shared/lib/theme/useTheme';
+import styles from './ThemeSwitcher.module.scss';
 
 export const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useTheme();
@@ -7,15 +8,12 @@ export const ThemeSwitcher = () => {
     <button
       onClick={toggleTheme}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+      className={styles.button}
     >
       <img
         src={theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'}
-        width={30}
         alt="Toggle theme"
-        className="object-cover w-8 h-8"
-        style={{
-          backgroundColor: "#b692e8ff"
-        }}
+        className={styles.image}
       />
     </button>
   );
