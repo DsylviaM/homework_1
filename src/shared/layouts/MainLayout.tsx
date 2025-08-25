@@ -1,22 +1,22 @@
-import React, { use } from "react";
+import React, { ReactNode } from "react";
 import Header from "../../widgets/LayoutHeader/Header";
 import Footer from "../../widgets/LayoutFooter/Footer";
-import '../../../css/style.css';
 import PostList from "../../widgets/PostList/PostList";
 
+interface MainLayoutProps {
+    children: ReactNode;
+    header?: ReactNode;
+    footer?: ReactNode;
+}
 
-const MainLayout = (props) => {
-
+const MainLayout = ({ children, header, footer }: MainLayoutProps) => {
     return (
         <>
-            <Header 
-                appTitle="My Application for homework 1"
-                factsTitle="Interesting facts: "
-            />
+            {header}
             <main>
-                <PostList />
+                {children}
             </main>
-            <Footer name="Natalia"/>
+            {footer}
         </>
     )
 }

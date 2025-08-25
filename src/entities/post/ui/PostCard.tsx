@@ -1,5 +1,6 @@
 import { useTheme } from '../../../shared/lib/theme/useTheme';
-import type { Post } from '../../../widgets/PostList/PostList';
+import type { Post } from '../model/types';
+import styles from "./PostCard.module.scss";
 
 interface PostCardProps {
     post: Post
@@ -8,7 +9,7 @@ interface PostCardProps {
 const Card = ({ post }: PostCardProps) => {
     const {isDark} = useTheme();
     return (
-        <div className={`layout ${isDark ? 'dark' : 'light'}`}>
+        <div className={`${styles.layout} ${isDark ? 'dark' : 'light'}`}>
             <p>{post.id}. {post.body}</p>
         </div>
     )

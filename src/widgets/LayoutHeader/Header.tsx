@@ -2,13 +2,15 @@ import React, { useContext } from "react";
 import { useTheme } from "../../shared/lib/theme/useTheme";
 import Modal from "../../shared/ui/Modal/Modal";
 import { Button } from "../../shared/ui/Button/Button";
+import styles from "./Header.module.scss";
 
 const Header = (props) => {
     const { isDark, toggleTheme } = useTheme();
     const [isOpen, setIsOpen] = React.useState(false);
 
     return <header
-        className={`header ${isDark ? 'dark' : 'light'}`}
+        className={styles.header}
+        data-theme={isDark ? 'dark' : 'light'}
     >
         <img
             src={isDark ? '/images/logo-dark.png' : '/images/logo-light.png'}
@@ -18,9 +20,7 @@ const Header = (props) => {
             onClick={toggleTheme}
         />
         <h1>
-            {props.appTitle}
-            <br />
-            {props.factsTitle}
+            {props.title}
         </h1>
         <Button
             variant="secondary"
