@@ -3,7 +3,6 @@ import React from "react";
 import  { factPosts } from "../../entities/post/model/types"
 
 
-
 const PostList = () => {
     return (
         <div>

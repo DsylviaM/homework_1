@@ -7,9 +7,9 @@ interface PostCardProps {
 }
 
 const Card = ({ post }: PostCardProps) => {
-    const {isDark} = useTheme();
+    const {theme} = useTheme();
     return (
-        <div className={`${styles.layout} ${isDark ? 'dark' : 'light'}`}>
+       <div className={styles.layout} data-theme={theme}>
             <p>{post.id}. {post.body}</p>
         </div>
     )
