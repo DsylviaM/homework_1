@@ -12,14 +12,14 @@ type ModalProps = {
 
 const ModalRoot = ({ isOpen, onClose, children }: PropsWithChildren<ModalProps>) => {
     if (!isOpen) return null;
-    const { isDark } = useTheme();
+    const { theme } = useTheme();
 
     return ReactDom.createPortal(
         <div className={stylesModul.modalOverlay} onClick={onClose}>
             <div
                 className={stylesModul.modalContent}
                 onClick={(e) => e.stopPropagation()} // Чтобы клик внутри не закрывал окно
-                data-theme={isDark ? 'dark' : 'light'}
+                data-theme={theme}
             >
                 <Button
                     variant="text"
@@ -36,11 +36,11 @@ const ModalRoot = ({ isOpen, onClose, children }: PropsWithChildren<ModalProps>)
 };
 
 const Header = ({ children }: { children: React.ReactNode }) => {
-    const { isDark } = useTheme();
+    const { theme } = useTheme();
     return (
         <header
         className={stylesModul.modalHeader}
-        data-theme={isDark ? 'dark' : 'light'}
+        data-theme={theme}
         >
             {children}
         </header>

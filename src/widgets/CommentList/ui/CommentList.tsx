@@ -31,10 +31,10 @@ export const CommentList: React.FC<CommentListProps> = ({ comments, className = 
       {isExpanded && (
         <ul className="comment-items">
           {comments.map(comment => (
-            <li key={comment.id} className="comment-item">
+            <div key={comment.id} className="comment-item">
               <span className="comment-author">{comment.name}</span>
               <p className="comment-text">{comment.body}</p>
-            </li>
+            </div>
           ))}
         </ul>
       )}

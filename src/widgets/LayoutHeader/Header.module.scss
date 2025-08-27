@@ -15,24 +15,23 @@ html {
 }
 
 header {
-  background-color: #f5ba13;
-  margin: auto -16px;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    margin: auto -16px;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+    &[data-theme="light"] {
+        background: #f5ba13;
+    }
+
+    &[data-theme="dark"] {
+        background: #777773;
+    }
 }
 
 header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
-}
-
-header.light {
-  background-color: #f5ba13;
-}
-
-header.dark {
-  background-color: #777773;
 }
 
 button {

@@ -3,25 +3,19 @@ import { useTheme } from "../../shared/lib/theme/useTheme";
 import Modal from "../../shared/ui/Modal/Modal";
 import { Button } from "../../shared/ui/Button/Button";
 import styles from "./Header.module.scss";
+import { ThemeSwitcher } from "../../features/ThemeSwittcher/ui/ThemeSwitcher";
 
 const Header = (props) => {
-    const { isDark, toggleTheme } = useTheme();
+    const { theme } = useTheme();
     const [isOpen, setIsOpen] = React.useState(false);
 
     return <header
-        className={`${styles.header} ${isDark ? styles.dark : styles.light}`}
+        className={styles.header}
+        data-theme={theme}
     >
-        <img
-            src={isDark ? '/images/logo-dark.png' : '/images/logo-light.png'}
-            width={30}
-            alt="logo"
-            className="header__logo"
-            onClick={toggleTheme}
-        />
+        <ThemeSwitcher />
         <h1>
-            {props.appTitle}
-            <br />
-            {props.factsTitle}
+            {props.title}
         </h1>
         <Button
             variant="secondary"

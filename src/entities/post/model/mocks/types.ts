@@ -1,9 +1,4 @@
-// src/shared/constants/posts.ts
-export type Comment = {
-  id: number;
-  name: string;
-  body: string;
-};
+import { Comment } from "../../../comment/models/types"
 
 export type Post = {
   id: number;

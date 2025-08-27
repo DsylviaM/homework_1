@@ -11,9 +11,9 @@ export const PostLengthFilter: React.FC<PostLengthFilterProps> = ({
   minLength,
   onLengthChange
 }) => {
-  const { isDark } = useTheme();
+  const { theme } = useTheme();
   return (
-    <div className={`length-filter ${isDark ? 'dark' : 'light'}`}>
+    <div className={`length-filter ${theme}`}>
       <label>
         Минимальная длина заголовка:
         <input

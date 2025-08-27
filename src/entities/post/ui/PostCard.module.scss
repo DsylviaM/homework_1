@@ -1,20 +1,59 @@
 /* Основные стили карточки */
+// .layout {
+//   border-radius: 7px;
+//   padding: 10px;
+//   width: 240px;
+//   margin: 16px;
+//   float: left;
+// }
+
+// .layout.light {
+//   background: #fff;
+//   box-shadow: 0 2px 5px #ccc;
+// }
+
+// .layout.dark {
+//   background: #bbb5b5;
+//   box-shadow: 0 2px 5px #030303;
+// }
+.layout h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.layout p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "McLaren", cursive;
+}
+
 .layout {
-  border-radius: 7px;
-  padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
-}
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 16px;
+  border-radius: 8px;
 
-.layout.light {
-  background: #fff;
-  box-shadow: 0 2px 5px #ccc;
-}
+  &[data-theme="dark"] {
+    --bg-color: #aeabab;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+  }
 
-.layout.dark {
-  background: #bbb5b5;
-  box-shadow: 0 2px 5px #030303;
+  &[data-theme="light"] {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+  }
 }
 
 /* Контент карточки */
