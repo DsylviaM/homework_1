@@ -1,0 +1,149 @@
+/* Основные стили карточки */
+// .layout {
+//   border-radius: 7px;
+//   padding: 10px;
+//   width: 240px;
+//   margin: 16px;
+//   float: left;
+// }
+
+// .layout.light {
+//   background: #fff;
+//   box-shadow: 0 2px 5px #ccc;
+// }
+
+// .layout.dark {
+//   background: #bbb5b5;
+//   box-shadow: 0 2px 5px #030303;
+// }
+.layout h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.layout p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "McLaren", cursive;
+}
+
+.layout {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 16px;
+  border-radius: 8px;
+
+  &[data-theme="dark"] {
+    --bg-color: #aeabab;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+  }
+
+  &[data-theme="light"] {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+  }
+}
+
+/* Контент карточки */
+.card-content {
+  padding: 10px 0;
+}
+
+.card-title {
+  font-size: 1.1em;
+  margin: 0 0 6px 0;
+}
+
+.card-body {
+  font-size: 1.1em;
+  margin: 0 0 10px 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "McLaren", cursive;
+}
+
+/* Стили для комментариев */
+.comment-container {
+  margin-top: 1rem;
+  border-top: 1px solid;
+  padding-top: 1rem;
+}
+
+.layout.light .comment-container {
+  border-color: #eee;
+}
+
+.layout.dark .comment-container {
+  border-color: #444;
+}
+
+.comment-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
+  transition: opacity 0.2s;
+}
+
+.layout.light .comment-toggle-btn {
+  color: #6200ee;
+}
+
+.layout.dark .comment-toggle-btn {
+  color: #6200ee;
+}
+
+.comment-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+.comment-items {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.comment-item {
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed;
+}
+
+.layout.light .comment-item {
+  border-color: #f0f0f0;
+}
+
+.layout.dark .comment-item {
+  border-color: #555;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-author {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 0.3rem;
+}
+
+.comment-text {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
