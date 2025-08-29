@@ -1,0 +1,61 @@
+.container {
+  background-color: #f1eee6;
+  font-family: 'McLaren', cursive;
+  font-weight: 400;
+  margin: 0;
+  padding: 16px;
+}
+
+.backLink {
+  color: #6200ee;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.postsCount {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.loadingContainer {
+  padding: 20px;
+  text-align: center;
+  background-color: #f1eee6;
+  font-family: 'McLaren', cursive;
+}
+
+.errorContainer {
+  padding: 20px;
+  text-align: center;
+  background-color: #f1eee6;
+  font-family: 'McLaren', cursive;
+}
+
+.retryButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'McLaren', cursive;
+  
+  &:hover {
+    background-color: #6200ee;
+  }
+}
+
+.noPosts {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
