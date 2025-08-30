@@ -1,0 +1,210 @@
+// UserPostPage.module.scss
+.container {
+  padding: 20px;
+  background-color: #f1eee6;
+  font-family: 'McLaren', cursive;
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.title {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.userInfo {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.backButton {
+  color: #6200ee;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #6200ee;
+  border-radius: 6px;
+  font-weight: 500;
+  
+  &:hover {
+    background-color: #6200ee;
+    color: white;
+  }
+}
+
+.stats {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6200ee;
+}
+
+.statPosts {
+  color: #6200ee;
+}
+
+.statId {
+  color: #28a745;
+}
+
+.statLabel {
+  color: #666;
+  font-size: 14px;
+}
+
+.sectionTitle {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 22px;
+}
+
+.postsGrid {
+  display: grid;
+  gap: 20px;
+}
+
+.postCard {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.postLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.postTitle {
+  margin: 0 0 12px 0;
+  color: #2c3e50;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.postBody {
+  margin: 0 0 15px 0;
+  color: #666;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.postFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postId {
+  font-size: 12px;
+  color: #888;
+  background-color: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.readMore {
+  font-size: 12px;
+  color: #6200ee;
+  font-weight: 500;
+}
+
+.noPosts {
+  background-color: white;
+  padding: 60px 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noPostsIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.noPostsTitle {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.noPostsText {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.loadingContainer {
+  padding: 40px;
+  text-align: center;
+  background-color: #f1eee6;
+  font-family: 'McLaren', cursive;
+  min-height: 60vh;
+}
+
+.errorContainer {
+  padding: 40px;
+  text-align: center;
+  background-color: #f1eee6;
+  font-family: 'McLaren', cursive;
+  min-height: 60vh;
+}
+
+.retryButton {
+  padding: 10px 20px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'McLaren', cursive;
+  
+  &:hover {
+    background-color: #6200ee;
+  }
+}
+
+.errorBackLink {
+  color: #6200ee;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
