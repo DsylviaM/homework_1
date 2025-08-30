@@ -1,35 +1,25 @@
-import React from 'react';
-import styles from './Button.module.css';
+// src/shared/ui/Button/Button.tsx
+import React, { ButtonHTMLAttributes } from 'react';
+import styles from './Button.module.scss';
 
-interface ButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-  className?: string;
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'text';
   size?: 'small' | 'medium' | 'large';
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  children,
-  onClick,
-  type = 'button',
-  disabled = false,
-  className = '',
   variant = 'primary',
   size = 'medium',
+  className = '',
+  ...props
 }) => {
   const variantClass = styles[`button--${variant}`];
   const sizeClass = styles[`button--${size}`];
+  
   return (
     <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
       className={`${styles.button} ${variantClass} ${sizeClass} ${className}`}
-    >
-      {children}
-    </button>
+      {...props}
+    />
   );
 };

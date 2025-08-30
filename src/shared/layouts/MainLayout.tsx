@@ -13,7 +13,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     return (
         <>
             <Header
-                appTitle="My Application for homework 5"
+                appTitle="My Application for homework 6"
             />
             <main>
                 { children }

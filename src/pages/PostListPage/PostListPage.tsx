@@ -3,6 +3,8 @@ import { useGetPostsByUserIdQuery } from '../../entities/post/api/postsApi';
 import UserLayout from '../UserLayout/ui/UserLayout';
 import PostWithComments from '../../widgets/PostWithComment/ui/PostWithComments';
 import styles from './PostListPage.module.scss';
+import { ItemList } from '../../shared/ui/ItemList/ItemList';
+import { Post } from '../../entities/post/model/types';
 
 interface PostListPageProps {
   userId?: number;
@@ -34,6 +36,11 @@ const PostListPage = ({ userId = 1}: PostListPageProps) => {
     );
   }
 
+    // Обработчик клика по посту (опционально) для тестирования
+  const handlePostClick = (post: Post, index: number) => {
+    // console.log('Post clicked:', post, index);
+  };
+
   return (
     <div>
       <UserLayout />
@@ -48,18 +55,22 @@ const PostListPage = ({ userId = 1}: PostListPageProps) => {
           Показано {posts?.length || 0} постов
         </div>
       </div>
-      
-      <div className={styles.content}>
-        {posts?.map(post => (
+
+      {/* Используем наш дженерик ItemList */}
+      <ItemList<Post>
+        items={posts || []}
+        renderItem={(post) => (
           <PostWithComments key={post.id} post={post} />
-        ))}
-        
-        {(!posts || posts.length === 0) && (
+        )}
+        onItemClick={handlePostClick
+        }
+        className={styles.postsList}
+        emptyMessage={
           <div className={styles.noPosts}>
             Нет постов для отображения
           </div>
-        )}
-      </div>
+        }
+      />
     </div>
   );
 };

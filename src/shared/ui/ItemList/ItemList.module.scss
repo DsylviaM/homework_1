@@ -1,0 +1,127 @@
+// src/shared/ui/ItemList/ItemList.module.scss
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  
+  &[data-theme="light"] {
+    background: #ffffff;
+    color: #333333;
+  }
+
+  &[data-theme="dark"] {
+    background: #2d2d2d;
+    color: #ffffff;
+  }
+}
+
+.itemListItem {
+  padding: 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  // Стили для light темы
+  [data-theme="light"] & {
+    background: #ffffff;
+    border-color: #e0e0e0;
+    
+    &:hover {
+      background: #f8f9fa;
+      border-color: #6200ee;
+    }
+  }
+
+  // Стили для dark темы
+  [data-theme="dark"] & {
+    background: #3d3d3d;
+    border-color: #555555;
+    
+    &:hover {
+      background: #4d4d4d;
+      border-color: #6200ee;
+    }
+  }
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 40px;
+  text-align: center;
+  font-style: italic;
+  border-radius: 8px;
+  
+  // Стили для light темы
+  [data-theme="light"] & {
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px dashed #dee2e6;
+  }
+
+  // Стили для dark темы
+  [data-theme="dark"] & {
+    background: #3d3d3d;
+    color: #adb5bd;
+    border: 1px dashed #555555;
+  }
+}
+
+// Анимация для загрузки (опционально)
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  
+  &::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border: 2px solid transparent;
+    border-top: 2px solid #6200ee;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Responsive стили
+@media (max-width: 768px) {
+  .itemList {
+    gap: 12px;
+  }
+  
+  .itemListItem {
+    padding: 12px;
+    border-radius: 6px;
+  }
+  
+  .empty {
+    min-height: 150px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .itemList {
+    gap: 8px;
+  }
+  
+  .itemListItem {
+    padding: 10px;
+    border-radius: 4px;
+  }
+}

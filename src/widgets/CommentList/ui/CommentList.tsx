@@ -1,9 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import { Post } from '../../../entities/post/api/postsApi';
-
-interface PostWithCommentsProps {
-  post: Post;
-}
 
 export interface Comment {
   postId: number;
